@@ -1,3 +1,4 @@
+import { ElButton } from "element-plus"
 import { defineComponent, h } from "vue"
 
 export default defineComponent({
@@ -5,7 +6,7 @@ export default defineComponent({
   setup(props, context) {
     // const { render } = useButton(props, context)
     return ()=>{
-      return <div>22</div>
+      return <ElButton type="primary">222</ElButton>
     }
   }
 })

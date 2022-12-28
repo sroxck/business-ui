@@ -9,6 +9,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
+    "types": ["element-plus/global"],
     "lib": [
       "ESNext",
       "DOM"
@@ -26,11 +27,10 @@
     },
   },
   "include": [
-    
     "**/*.ts",
     "**/*.d.ts",
     "**/*.tsx",
-    "**/*.vue",
+    "**/*.vue", 
   ],
   "references": [
     {
