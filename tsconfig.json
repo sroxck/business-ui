@@ -30,7 +30,7 @@
     "**/*.ts",
     "**/*.d.ts",
     "**/*.tsx",
-    "**/*.vue", 
+    "**/*.vue", "document/docs/vite.config.js", "document/docs/vite.config.js", 
   ],
   "references": [
     {

@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import vueJsx from '@vitejs/plugin-vue-jsx';
+import dts from 'vite-plugin-dts'
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
@@ -14,7 +15,10 @@ export default defineConfig({
     },
   },
   
-  plugins: [vue(),vueJsx()],
+  plugins: [vue(),vueJsx(),dts({
+    //指定使用的tsconfig.json为我们整个项目根目录下掉,如果不配置,你也可以在components下新建tsconfig.json
+    tsConfigFilePath: './tsconfig.json'
+}),],
   build: {
     lib: {
       entry: resolve(__dirname, 'packages/index.ts'),
@@ -31,5 +35,6 @@ export default defineConfig({
         }
       }
     }
-  }
+  },
+  
 })
