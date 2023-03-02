@@ -1,6 +1,13 @@
+<!--
+ * @Author: sroxck
+ * @Date: 2022-11-29 16:14:27
+ * @LastEditors: sroxck
+ * @LastEditTime: 2023-01-10 13:53:47
+ * @Description: 
+-->
 <script setup lang="ts">
 import { TableWithAddRows, SrTableWithAddRows } from "@ui/TableWithAddRows/index"
-import { ref } from "vue";
+import { computed, ref } from "vue";
 const tableData = ref([
   { name: '11', age: 12 },
   { name: '12', age: 13 },
@@ -14,6 +21,13 @@ const labelData = ref({
 const clickEvent = () => {
   console.log(tableData.value)
 }
+const count = ref(0)
+console.log(count)
+const ss = computed(()=>{
+  return 22
+}
+ )
+console.log(ss,'00')
 </script>
 
 <template>
