@@ -11,3 +11,4 @@ export const withInstall = <T extends extendsName>(component: T) => {
   }
   return component as SFCWithInstall<T>
 }
+ 
