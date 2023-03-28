@@ -7,7 +7,8 @@
 -->
 <script setup lang="ts">
 import { TableWithAddRows, SrTableWithAddRows } from "@ui/TableWithAddRows/index"
-import { computed, ref } from "vue";
+import { Search } from "@ui/Search";
+import { computed, reactive, ref } from "vue";
 const tableData = ref([
   { name: '11', age: 12 },
   { name: '12', age: 13 },
@@ -23,20 +24,49 @@ const clickEvent = () => {
 }
 const count = ref(0)
 console.log(count)
-const ss = computed(()=>{
+const ss = computed(() => {
   return 22
 }
- )
-console.log(ss,'00')
+)
+console.log(ss, '00')
+const searchConfig = reactive({
+  config: {
+    inline: true,
+    labelWidth: '75px'
+  },
+  property: [
+    {
+      native: {
+        prefixIcon: 'iconsearchsvg'
+      },
+      model: 'age',
+      value: ''
+    },
+    {
+      native: {
+        prefixIcon: 'iconsearchsvg'
+      },
+      model: 'name',
+      value: ''
+    },
+    {
+      native: {
+        prefixIcon: 'iconsearchsvg'
+      },
+      model: 'sex',
+      value: ''
+    }
+  ]
+})
 </script>
 
 <template>
   <div>
     <h1>business-ui show</h1>
     <EButton @click="clickEvent"></EButton>
-
-    <TableWithAddRows :table-data="tableData" :label-data="labelData" >
-      <template #handle="slotProps" >
+    <Search :config="searchConfig"></Search>
+    <TableWithAddRows :table-data="tableData" :label-data="labelData">
+      <template #handle="slotProps">
         <el-button>自定义{{ slotProps.row }}</el-button>
       </template>
     </TableWithAddRows>
