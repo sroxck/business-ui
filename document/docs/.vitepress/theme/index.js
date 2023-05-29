@@ -1,3 +1,10 @@
+/**
+ * @Author: sroxck
+ * @Date: 2023-05-29 10:28:18
+ * @LastEditors: sroxck
+ * @LastEditTime: 2023-05-29 11:10:16
+ * @Description: 
+ */
 import DefaultTheme from 'vitepress/theme'
 import {EButton,TableWithAddRows,SrTableWithAddRows} from '../../../../dist/business-ui'
 import   '../../../../dist/style.css'
@@ -10,12 +17,6 @@ export default {
   ...DefaultTheme,
   enhanceApp(ctx) {
  
-
-// Output:
-//
-// <details><summary>click me</summary>
-// <p><em>content</em></p>
-// </details>
     console.log(ctx,'ctx',TableWithAddRows,SrTableWithAddRows)
     DefaultTheme.enhanceApp(ctx)
  

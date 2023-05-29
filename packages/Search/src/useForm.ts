@@ -29,6 +29,7 @@ const useFormData = (property: configType[]) => {
 export function useForm(config: searchConfig) {
   const { formData } = useFormData(config.property)
   const instance = (config: configType, _formData: objectRecord, ctx: SetupContext) => {
+    _formData = reactive({..._formData})
     const { placeholder = '请输入...', model } = config
     return {
       props: {
@@ -43,11 +44,16 @@ export function useForm(config: searchConfig) {
           if (e.key == 'Enter') ctx.emit('search', _formData)
         }
       },
-      on: {
-        input: (e: string) => {
-          _formData[model] = e
-        }
+      
+      onInput: (e: string) => {
+        console.log(e,'_formData',_formData)
+        _formData[model] = e
+      },
+      onChange: (e:string) => {
+        console.log(e,'_formDat22a',_formData)
+        // _formData[model] = e
       }
+     
     }
   }
   return {

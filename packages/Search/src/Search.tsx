@@ -60,6 +60,7 @@ export default defineComponent({
     }
 
     const FormItemInstance = (config: configType) => {
+      
       const { type } = config
       return h(Typer[type || 'default'], instance(config, formData, ctx))
     }

@@ -13,6 +13,7 @@
     "create": "./bin/hayaix.js"
   },
   "scripts": {
+    "build":"vite build",
     "d": "vite"
   },
   "dependencies": {

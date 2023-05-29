@@ -27,9 +27,9 @@ import {
   version,
   watch,
   watchEffect
-} from "./chunk-LKMMU2AX.js";
+} from "./chunk-Y6245NFN.js";
 
-// node_modules/.pnpm/vue-demi@0.13.11_vue@3.2.45/node_modules/vue-demi/lib/index.mjs
+// node_modules/.pnpm/registry.npmmirror.com+vue-demi@0.14.5_vue@3.2.45/node_modules/vue-demi/lib/index.mjs
 var isVue2 = false;
 var isVue3 = true;
 function set(target, key, val) {
@@ -49,7 +49,7 @@ function del(target, key) {
   delete target[key];
 }
 
-// node_modules/.pnpm/@vueuse+shared@9.9.0_vue@3.2.45/node_modules/@vueuse/shared/index.mjs
+// node_modules/.pnpm/registry.npmmirror.com+@vueuse+shared@9.9.0_vue@3.2.45/node_modules/@vueuse/shared/index.mjs
 var __defProp$9 = Object.defineProperty;
 var __defProps$6 = Object.defineProperties;
 var __getOwnPropDescs$6 = Object.getOwnPropertyDescriptors;
@@ -930,9 +930,9 @@ var formatDate = (date, formatStr, options = {}) => {
 };
 var normalizeDate = (date) => {
   if (date === null)
-    return new Date(NaN);
+    return /* @__PURE__ */ new Date(NaN);
   if (date === void 0)
-    return new Date();
+    return /* @__PURE__ */ new Date();
   if (date instanceof Date)
     return new Date(date);
   if (typeof date === "string" && !/Z$/i.test(date)) {
@@ -1505,7 +1505,7 @@ function whenever(source, cb, options) {
   }, options);
 }
 
-// node_modules/.pnpm/@vueuse+core@9.9.0_vue@3.2.45/node_modules/@vueuse/core/index.mjs
+// node_modules/.pnpm/registry.npmmirror.com+@vueuse+core@9.9.0_vue@3.2.45/node_modules/@vueuse/core/index.mjs
 function computedAsync(evaluationCallback, initialState, optionsOrRef) {
   let options;
   if (isRef(optionsOrRef)) {
@@ -5450,8 +5450,8 @@ function useNow(options = {}) {
     controls: exposeControls = false,
     interval = "requestAnimationFrame"
   } = options;
-  const now2 = ref(new Date());
-  const update = () => now2.value = new Date();
+  const now2 = ref(/* @__PURE__ */ new Date());
+  const update = () => now2.value = /* @__PURE__ */ new Date();
   const controls = interval === "requestAnimationFrame" ? useRafFn(update, { immediate: true }) : useIntervalFn(update, interval, { immediate: true });
   if (exposeControls) {
     return __spreadValues$62({
@@ -8044,4 +8044,4 @@ export {
   useWindowScroll,
   useWindowSize
 };
-//# sourceMappingURL=chunk-AOC522VJ.js.map
+//# sourceMappingURL=chunk-OJDBIBJX.js.map

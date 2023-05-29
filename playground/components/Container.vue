@@ -2,12 +2,13 @@
  * @Author: sroxck
  * @Date: 2022-11-29 16:14:27
  * @LastEditors: sroxck
- * @LastEditTime: 2023-01-10 13:53:47
+ * @LastEditTime: 2023-05-29 11:12:33
  * @Description: 
 -->
 <script setup lang="ts">
 import { TableWithAddRows, SrTableWithAddRows } from "@ui/TableWithAddRows/index"
 import { Search } from "@ui/Search";
+import { Button } from "@ui/Button";
 import { computed, reactive, ref } from "vue";
 const tableData = ref([
   { name: '11', age: 12 },
@@ -40,21 +41,21 @@ const searchConfig = reactive({
         prefixIcon: 'iconsearchsvg'
       },
       model: 'age',
-      value: ''
+      value: '2222'
     },
     {
       native: {
         prefixIcon: 'iconsearchsvg'
       },
       model: 'name',
-      value: ''
+      value: '4444'
     },
     {
       native: {
         prefixIcon: 'iconsearchsvg'
       },
       model: 'sex',
-      value: ''
+      value: '12'
     }
   ]
 })
@@ -63,7 +64,7 @@ const searchConfig = reactive({
 <template>
   <div>
     <h1>business-ui show</h1>
-    <EButton @click="clickEvent"></EButton>
+    <Button @click="clickEvent"></Button>
     <Search :config="searchConfig"></Search>
     <TableWithAddRows :table-data="tableData" :label-data="labelData">
       <template #handle="slotProps">
